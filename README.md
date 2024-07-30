@@ -1,6 +1,7 @@
 ## Kafka-WSS
 
-Simple boilerplate for KafkaJS combined with websockets that are easy to use. 
+Simple boilerplate for Kafka Sink (Receiver) using KafkaJS combined with websocket that are easy to use. 
+Can handle multiple websocket connection with multiple different Kafka topics.
 
 ## Quick-Start
 
