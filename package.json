@@ -1,0 +1,25 @@
+{
+    "name": "kafka-wss",
+    "version": "1.0.0",
+    "dependencies": {
+        "@types/node": "^22.0.0",
+        "axios": "^1.7.2",
+        "dotenv": "^16.4.5",
+        "fs": "^0.0.1-security",
+        "kafkajs": "^2.2.4",
+        "uuid": "^10.0.0",
+        "ws": "^8.18.0"
+    },
+    "scripts": {
+        "start": "node dist/app.js",
+        "build": "tsc",
+        "lint": "eslint ./src/**/.ts"
+    },
+    "devDependencies": {
+        "@types/uuid": "^10.0.0",
+        "@types/ws": "^8.5.11",
+        "@typescript-eslint/eslint-plugin": "^7.17.0",
+        "@typescript-eslint/parser": "^7.17.0",
+        "eslint": "^8.57.0"
+    }
+}
