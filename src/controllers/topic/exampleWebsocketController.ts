@@ -6,7 +6,7 @@ import { ISocket } from "../../types";
     This example is very basic, convert message to json and send to matching receivers.
     You modify with your own logic and operations if needed.
 */
-export default function websocketTopicController(topic: string, sockets: ISocket[], message: KafkaMessage) {
+export default function websocketTopicController(topic: string, sockets: ISocket[], message: KafkaMessage): void {
     // Parse kafka message body to JSON format
     const stringJson = message.value == null ? "" : message.value.toString();
     const startIndex = stringJson.indexOf("{");

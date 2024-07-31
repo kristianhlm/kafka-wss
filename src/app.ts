@@ -8,7 +8,7 @@ import fs from "fs";
 import ws from "ws";
 import { IOptionSSL, ISocket } from "./types";
 import logger from "./logger/logger";
-import messageController from "./controller/messageController";
+import messageController from "./controllers/messageController";
 
 // Dotenv
 dotenv.config();
@@ -65,7 +65,7 @@ const main = async () => {
     // Websocket server
     const wsServer: ws.Server = new ws.Server({ server });
 
-    // On Connection
+	// On Connection
 	wsServer.on('connection', (socket: ws.WebSocket, req: IncomingMessage) => {
 		// Check topic from incoming. it will determine what data they receive
 		let topic: string = "default";
@@ -88,7 +88,7 @@ const main = async () => {
 		
         // Handle client close connection
 		socket.on('close', function (event) {
-            // Remove closed connection from sockets
+			// Remove closed connection from sockets
 			const index: number = sockets.findIndex(function(item, i){
 				return item.id === uuid
 			});

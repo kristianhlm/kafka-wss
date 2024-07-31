@@ -7,7 +7,7 @@ import logger from "../../logger/logger";
     This example is very basic, convert message to json and send to webhook.
     You modify with your own logic and operations if needed.
 */
-export default function webhookTopicController(topic: string, message: KafkaMessage) {
+export default function webhookTopicController(topic: string, message: KafkaMessage): void {
     // Parse kafka message body to JSON format
     const stringJson = message.value == null ? "" : message.value.toString();
     const startIndex = stringJson.indexOf("{");

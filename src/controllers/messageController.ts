@@ -6,7 +6,7 @@ import webhookTopicController from "./topic/exampleWebhookController";
 import websocketTopicController from "./topic/exampleWebsocketController";
 
 // Main controller for handling kafka message
-export default function messageController(topic: string , partition: number, message: KafkaMessage, sockets: ISocket[]) {
+export default function messageController(topic: string , partition: number, message: KafkaMessage, sockets: ISocket[]): void {
     switch(topic) {
         case "EXAMPLE_WEBSOCKET_TOPIC": {
             // do logic
